@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import PokemonSelect from "./PokemonSelect";
 import PokemonCard from "./PokemonCard";
 import {useAxios} from './hooks'
@@ -15,7 +15,7 @@ function PokeDex() {
   //   );
   //   setPokemon(pokemon => [...pokemon, { ...response.data, id: uuid() }]);
   // };
-  const [pokemon, addPokemon, deletePokemon] = useAxios('https://pokeapi.co/api/v2/pokemon/');
+  const [pokemon, addPokemon, deletePokemon] = useAxios('https://pokeapi.co/api/v2/pokemon/', "pokemon");
   return (
     <div className="PokeDex">
       <div className="PokeDex-buttons">

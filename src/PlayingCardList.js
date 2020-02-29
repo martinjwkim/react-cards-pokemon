@@ -6,7 +6,7 @@ import "./PlayingCardList.css";
 /* Renders a list of playing cards.
  * Can also add a new card at random. */
 function CardTable() {
-  const [cards, addCard, deleteCards] = useAxios("https://deckofcardsapi.com/api/deck/new/draw/");
+  const [cards, addCard, deleteCards] = useAxios("https://deckofcardsapi.com/api/deck/new/draw/", "playingCard");
 
   return (
     <div className="PlayingCardList">
